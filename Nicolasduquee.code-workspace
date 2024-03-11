@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"name": "Nicolasduquee",
+			"path": "../Nicolasduquee"
+		},
+		{
+			"name": "tg-dos-cria",
+			"path": "../tg-dos-cria"
+		},
+		{
+			"name": "CPP",
+			"path": "../CPP"
+		},
+		{
+			"name": "bootstrap",
+			"path": "../bootstrap"
+		},
+		{
+			"name": "estruturas-de-dados-cpp",
+			"path": "../estruturas-de-dados-cpp"
+		},
+		{
+			"name": "POO-Java",
+			"path": "../POO-Java"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}

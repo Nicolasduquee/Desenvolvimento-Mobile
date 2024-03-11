@@ -1,2 +1,2 @@
 # Desenvolvimento-Mobile
-Exercícios sobre arquitetura mobile desenvolvidos em Dart
+Exercícios sobre arquitetura mobile desenvolvidos em Dart e Flutter.
