@@ -3,30 +3,33 @@
 import 'dart:io';
 
 void main(List<String> args) {
-  List<dynamic> notas = [0, 0, 0, 0];
+  List<double> notas = [];
 
   lerNota(notas);
   imprimirNotas(notas);
   calcMedia(notas);
 }
 
-void lerNota(notas) {
-  for (int i = 0; i < 4; i++) {
+void lerNota(List<double> notas) {
+  int i = 0;
+  String resp = "";
+  do {
     print("Digite a nota ${i + 1}:");
-    notas[i] = double.tryParse(stdin.readLineSync()!) ?? 0;
-  }
+    notas.add(double.tryParse(stdin.readLineSync()!) ?? 0);
+    print("Deseja inserir mais uma nota? (S/N)");
+    resp = stdin.readLineSync()!;
+    i++;
+  } while (resp == "s" || resp == "S");
 }
 
-void imprimirNotas(notas) {
-  for (int i = 0; i < 4; i++) {
+void imprimirNotas(List<double> notas) {
+  for (int i = 0; i < notas.length; i++) {
     print("Nota ${i + 1}: ${notas[i]}");
   }
 }
 
-void calcMedia(notas) {
-  double media;
+void calcMedia(List<double> notas) {
+  double media = notas.reduce((a, nota) => a + nota) / notas.length;
 
-  media = notas.reduce((i, j) => i + j) / 4;
-
-  print("Media: $media");
+  print("Media: ${media}");
 }
